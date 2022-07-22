@@ -1,17 +1,10 @@
-import numpy as np
-import os
-from numpy import genfromtxt
 import tensorflow as tf
-from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Lambda, BatchNormalization
-from tensorflow.keras.layers import Convolution2D, MaxPooling2D, AveragePooling2D, Input,concatenate
+from tensorflow.keras.layers import Dense, Activation, BatchNormalization
+from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import ModelCheckpoint
-from tensorflow.keras.optimizers import SGD
-import matplotlib.pyplot as plt
-from sklearn.metrics import mean_absolute_error
-from sklearn.model_selection import KFold
-from tensorflow.keras.utils import plot_model
-import pandas as pd
+
+
+
 
 def FCMnR_model(n_layers,input_shape,activation_function,learning_rate):
     input_vec = Input(shape=input_shape)
