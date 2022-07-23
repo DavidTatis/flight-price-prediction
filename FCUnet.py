@@ -2,54 +2,111 @@ import tensorflow as tf
 from tensorflow.keras.layers import Dense, Activation, BatchNormalization,Input,concatenate
 from tensorflow.keras.models import Model
 
-
-def create_new_model():
-    input_vec = Input(shape=(86,))
+#TODO: IMPLEMENT THE N LAYERS
+def irnet_model(n_layers,input_shape,activation_function,learning_rate):   
+    input_vec = Input(shape=input_shape)
+    if n_layers==1:
+        return irnet_model_1(input_shape,activation_function,learning_rate)
     #encoder
-    x0=Activation('relu')(BatchNormalization()(Dense(1024)(input_vec)))
-    x1=Activation('relu')(BatchNormalization()(Dense(1024)(x0)))
-    x2=Activation('relu')(BatchNormalization()(Dense(1024)(x1)))
-    x3=Activation('relu')(BatchNormalization()(Dense(1024)(x2)))
+    x0=Activation(activation_function)(BatchNormalization()(Dense(1024)(input_vec)))
+    x1=Activation(activation_function)(BatchNormalization()(Dense(1024)(x0)))
+    x2=Activation(activation_function)(BatchNormalization()(Dense(1024)(x1)))
+    x3=Activation(activation_function)(BatchNormalization()(Dense(1024)(x2)))
 
-    x4=Activation('relu')(BatchNormalization()(Dense(512)(x3)))
-    x5=Activation('relu')(BatchNormalization()(Dense(512)(x4)))
-    x6=Activation('relu')(BatchNormalization()(Dense(512)(x5)))
+    x4=Activation(activation_function)(BatchNormalization()(Dense(512)(x3)))
+    x5=Activation(activation_function)(BatchNormalization()(Dense(512)(x4)))
+    x6=Activation(activation_function)(BatchNormalization()(Dense(512)(x5)))
 
-    x7=Activation('relu')(BatchNormalization()(Dense(256)(x6)))
-    x8=Activation('relu')(BatchNormalization()(Dense(256)(x7)))
-    x9=Activation('relu')(BatchNormalization()(Dense(256)(x8)))
+    x7=Activation(activation_function)(BatchNormalization()(Dense(256)(x6)))
+    x8=Activation(activation_function)(BatchNormalization()(Dense(256)(x7)))
+    x9=Activation(activation_function)(BatchNormalization()(Dense(256)(x8)))
 
-    x10=Activation('relu')(BatchNormalization()(Dense(128)(x9)))
-    x11=Activation('relu')(BatchNormalization()(Dense(128)(x10)))
-    x12=Activation('relu')(BatchNormalization()(Dense(128)(x11)))
+    x10=Activation(activation_function)(BatchNormalization()(Dense(128)(x9)))
+    x11=Activation(activation_function)(BatchNormalization()(Dense(128)(x10)))
+    x12=Activation(activation_function)(BatchNormalization()(Dense(128)(x11)))
 
-    x13=Activation('relu')(BatchNormalization()(Dense(64)(x12)))
-    x14=Activation('relu')(BatchNormalization()(Dense(64)(x13)))
-    x15=Activation('relu')(BatchNormalization()(Dense(64)(x14)))
+    x13=Activation(activation_function)(BatchNormalization()(Dense(64)(x12)))
+    x14=Activation(activation_function)(BatchNormalization()(Dense(64)(x13)))
+    x15=Activation(activation_function)(BatchNormalization()(Dense(64)(x14)))
 
     #decoder
     merge1=concatenate([x12, x15], axis=-1)
-    x16=Activation('relu')(BatchNormalization()(Dense(128)(merge1)))
-    x17=Activation('relu')(BatchNormalization()(Dense(128)(x16)))
-    x18=Activation('relu')(BatchNormalization()(Dense(128)(x17)))
+    x16=Activation(activation_function)(BatchNormalization()(Dense(128)(merge1)))
+    x17=Activation(activation_function)(BatchNormalization()(Dense(128)(x16)))
+    x18=Activation(activation_function)(BatchNormalization()(Dense(128)(x17)))
 
     merge2=concatenate([x9, x18], axis=-1)
-    x19=Activation('relu')(BatchNormalization()(Dense(256)(merge2)))
-    x20=Activation('relu')(BatchNormalization()(Dense(256)(x19)))
-    x21=Activation('relu')(BatchNormalization()(Dense(256)(x20)))
+    x19=Activation(activation_function)(BatchNormalization()(Dense(256)(merge2)))
+    x20=Activation(activation_function)(BatchNormalization()(Dense(256)(x19)))
+    x21=Activation(activation_function)(BatchNormalization()(Dense(256)(x20)))
 
     merge3=concatenate([x6, x21], axis=-1)
-    x22=Activation('relu')(BatchNormalization()(Dense(256)(merge3)))
-    x23=Activation('relu')(BatchNormalization()(Dense(256)(x22)))
-    x24=Activation('relu')(BatchNormalization()(Dense(128)(x23)))
+    x22=Activation(activation_function)(BatchNormalization()(Dense(256)(merge3)))
+    x23=Activation(activation_function)(BatchNormalization()(Dense(256)(x22)))
+    x24=Activation(activation_function)(BatchNormalization()(Dense(128)(x23)))
 
     merge4=concatenate([x3, x24], axis=-1)
-    x25=Activation('relu')(BatchNormalization()(Dense(64)(merge4)))
-    x26=Activation('relu')(BatchNormalization()(Dense(32)(x25)))
-    x27=Activation('relu')(BatchNormalization()(Dense(16)(x26)))
+    x25=Activation(activation_function)(BatchNormalization()(Dense(64)(merge4)))
+    x26=Activation(activation_function)(BatchNormalization()(Dense(32)(x25)))
+    x27=Activation(activation_function)(BatchNormalization()(Dense(16)(x26)))
 
     x28=Dense(1, activation='linear')(x27) #53
 
     model=Model(input_vec,x28)
-    # model.summary()
+    model.compile(
+      optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+      loss=tf.keras.losses.mean_absolute_error,
+      metrics=[tf.keras.metrics.MeanAbsoluteError()])
+    
     return model
+
+
+def irnet_model_1(input_shape,activation_function,learning_rate):
+    input_vec = Input(shape=input_shape)
+    #encoder
+    
+    x3=Activation(activation_function)(BatchNormalization()(Dense(1024)(input_vec)))
+
+    
+    x6=Activation(activation_function)(BatchNormalization()(Dense(512)(x3)))
+
+    
+    x9=Activation(activation_function)(BatchNormalization()(Dense(256)(x6)))
+
+    
+    x12=Activation(activation_function)(BatchNormalization()(Dense(128)(x9)))
+
+    
+    x15=Activation(activation_function)(BatchNormalization()(Dense(64)(x12)))
+
+    #decoder
+    merge1=concatenate([x12, x15], axis=-1)
+    x16=Activation(activation_function)(BatchNormalization()(Dense(128)(merge1)))
+
+    x18=Activation(activation_function)(BatchNormalization()(Dense(128)(x16)))
+
+    merge2=concatenate([x9, x18], axis=-1)
+    x19=Activation(activation_function)(BatchNormalization()(Dense(256)(merge2)))
+    
+    x21=Activation(activation_function)(BatchNormalization()(Dense(256)(x19)))
+
+    merge3=concatenate([x6, x21], axis=-1)
+    x22=Activation(activation_function)(BatchNormalization()(Dense(256)(merge3)))
+    
+    x24=Activation(activation_function)(BatchNormalization()(Dense(128)(x22)))
+
+    merge4=concatenate([x3, x24], axis=-1)
+    x25=Activation(activation_function)(BatchNormalization()(Dense(64)(merge4)))
+    
+    x27=Activation(activation_function)(BatchNormalization()(Dense(16)(x25)))
+
+    x28=Dense(1, activation='linear')(x27) #53
+
+    model=Model(input_vec,x28)
+    model.compile(
+      optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+      loss=tf.keras.losses.mean_absolute_error,
+      metrics=[tf.keras.metrics.MeanAbsoluteError()])
+    
+    return model
+        
