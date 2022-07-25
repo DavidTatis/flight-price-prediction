@@ -11,7 +11,7 @@ https://www.kaggle.com/code/julienjta/flight-price-prediction-98-47-r2-score/dat
 https://www.kaggle.com/code/julienjta/flight-price-prediction-98-47-r2-score <br/>
 
 
-## Code:
+### Code:
 I create the Random GS with help of the SciKit-learn library. The models using tensorflow.keras GPU version. <br/>
 **FCUNet** Is a UNet architecture but using Fully Connected layers instead of convolutional layers.<br/>
 **FCMnR** Merge and Run architecture using Fully Connected layers.<br/>
@@ -19,9 +19,10 @@ I create the Random GS with help of the SciKit-learn library. The models using t
 <br/>
 For development and debugg purpose, i start coding in a Jupyter Notebook called fligh-prediction.ipynb. After a stable version, i create a python3.7 Script for each experiment/architecture. <br/>
 <br/>
-The final version of the codes are:<br/>
-**  fcunet-flight-prediction.py**: FCUNet for the flight price prediction problem using a Random Grid search. <br/>
-**  flight-prediction-script.py**: FCMnR for the flight price prediction problem using a Random Grid search.<br/>
-**  IRNET-fcunet-flight-prediction.py**: IRNET for the flight price prediction problem using a Random Grid search.<br/>
+
+Last version of the code:<br/>
+**fcunet-flight-prediction.py** : FCUNet for the flight price prediction problem using a Random Grid search. <br/>
+**flight-prediction-script.py** : FCMnR for the flight price prediction problem using a Random Grid search.<br/>
+**IRNET-fcunet-flight-prediction.py** : IRNET for the flight price prediction problem using a Random Grid search.<br/>
   
  
