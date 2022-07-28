@@ -1,0 +1,35 @@
+population: 30
+"{'n_layers': 1, 'learning_rate': 0.01, 'batch_size': 128, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 0.0001, 'batch_size': 32, 'activation_function': 'tanh'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'tanh'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'tanh'}","{'n_layers': 2, 'learning_rate': 0.0001, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 32, 'activation_function': 'elu'}","{'n_layers': 2, 'learning_rate': 0.01, 'batch_size': 128, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 1, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 1, 'learning_rate': 0.0001, 'batch_size': 64, 'activation_function': 'relu'}","{'n_layers': 3, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'elu'}","{'n_layers': 1, 'learning_rate': 0.0001, 'batch_size': 128, 'activation_function': 'relu'}","{'n_layers': 1, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 2, 'learning_rate': 0.01, 'batch_size': 16, 'activation_function': 'tanh'}","{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 0.0001, 'batch_size': 16, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 2, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 64, 'activation_function': 'relu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 2, 'learning_rate': 0.0001, 'batch_size': 16, 'activation_function': 'relu'}","{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 2, 'learning_rate': 1e-05, 'batch_size': 16, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'relu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 1, 'learning_rate': 0.01, 'batch_size': 32, 'activation_function': 'tanh'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 16, 'activation_function': 'tanh'}","{'n_layers': 2, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'relu'}"
+population: 30
+"{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 32, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 0.0001, 'batch_size': 128, 'activation_function': 'relu'}","{'n_layers': 2, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'tanh'}","{'n_layers': 3, 'learning_rate': 0.0001, 'batch_size': 64, 'activation_function': 'tanh'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 16, 'activation_function': 'elu'}","{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 1, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'elu'}","{'n_layers': 2, 'learning_rate': 0.0001, 'batch_size': 32, 'activation_function': 'tanh'}","{'n_layers': 2, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'elu'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 16, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 32, 'activation_function': 'relu'}","{'n_layers': 2, 'learning_rate': 0.001, 'batch_size': 64, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 0.0001, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 1, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'relu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'elu'}","{'n_layers': 2, 'learning_rate': 0.0001, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 0.01, 'batch_size': 16, 'activation_function': 'relu'}","{'n_layers': 1, 'learning_rate': 0.0001, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 2, 'learning_rate': 0.0001, 'batch_size': 16, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 128, 'activation_function': 'sigmoid'}","{'n_layers': 2, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'relu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'sigmoid'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 16, 'activation_function': 'tanh'}","{'n_layers': 2, 'learning_rate': 0.01, 'batch_size': 64, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 0.001, 'batch_size': 128, 'activation_function': 'sigmoid'}","{'n_layers': 2, 'learning_rate': 1e-05, 'batch_size': 32, 'activation_function': 'elu'}","{'n_layers': 3, 'learning_rate': 1e-05, 'batch_size': 64, 'activation_function': 'tanh'}"
+i:0Metric:16062.976326082435
+i:1Metric:20772.005916941718
+i:2Metric:20765.394108164863
+i:3Metric:20193.80124317463
+i:4Metric:20562.04684864338
+i:5Metric:19614.868204861734
+i:6Metric:20790.09324871357
+i:7Metric:16062.52981133901
+i:8Metric:2394.5291996352016
+i:9Metric:19725.798008311347
+i:10Metric:2244.328795360841
+i:11Metric:20778.643434870795
+i:12Metric:2468.1622223334025
+i:13Metric:1917.0275958943023
+i:14Metric:20230.203770030097
+i:15Metric:20781.020567286567
+i:16Metric:1790.962264687008
+i:17Metric:2376.7624562677124
+i:18Metric:20742.231441844062
+i:19Metric:16062.528288192052
+i:20Metric:20742.231441844062
+i:21Metric:20555.118183482246
+i:22Metric:20771.424055445746
+i:23Metric:2165.0893456207295
+i:24Metric:20745.530109751777
+i:25Metric:16062.527148587162
+i:26Metric:3001.3932865866796
+i:27Metric:20500.56552540119
+i:28Metric:20687.342464909314
+i:29Metric:20739.51777302082
+E,N,D
