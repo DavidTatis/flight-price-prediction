@@ -5,18 +5,18 @@ from tensorflow.keras.models import Model
 
 #TODO: IMPLEMENT THE N LAYERS
 
-def irnet_model(n_layers,input_shape,activation_function,learning_rate):   
+def fcunet_model(n_layers,input_shape,activation_function,learning_rate):   
     if n_layers==1:
-        return irnet_model_1(input_shape,activation_function,learning_rate)
+        return fcunet_model_1(input_shape,activation_function,learning_rate)
     if n_layers==2:
-      return irnet_model_2(input_shape,activation_function,learning_rate)
+      return fcunet_model_2(input_shape,activation_function,learning_rate)
     if n_layers == 3:
-      return irnet_model_3(input_shape,activation_function,learning_rate)
+      return fcunet_model_3(input_shape,activation_function,learning_rate)
     
     
 
 
-def irnet_model_1(input_shape,activation_function,learning_rate):
+def fcunet_model_1(input_shape,activation_function,learning_rate):
     input_vec = Input(shape=input_shape)
     
     #encoder
@@ -49,7 +49,7 @@ def irnet_model_1(input_shape,activation_function,learning_rate):
     
     return model
 
-def irnet_model_2(input_shape,activation_function,learning_rate):
+def fcunet_model_2(input_shape,activation_function,learning_rate):
     input_vec = Input(shape=input_shape)
     #encoder
     x0=Activation(activation_function)(BatchNormalization()(Dense(1024)(input_vec)))
@@ -93,7 +93,7 @@ def irnet_model_2(input_shape,activation_function,learning_rate):
       metrics=[tf.keras.metrics.MeanAbsoluteError()])
     return model
 
-def irnet_model_3(input_shape,activation_function,learning_rate):
+def fcunet_model_3(input_shape,activation_function,learning_rate):
     input_vec = Input(shape=input_shape)
     #encoder
     x0=Activation(activation_function)(BatchNormalization()(Dense(1024)(input_vec)))

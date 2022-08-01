@@ -20,8 +20,7 @@ from random import random,randrange
 from operator import itemgetter
 import timeit
 
-from FCMnR import FCMnR_model
-from IRNet import IRNet_model
+from FCUnet import fcunet_model
 
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
@@ -87,7 +86,7 @@ xtrain.head()
 def evaluate_fitness(input_shape,n_layers,activation_function,learning_rate,batch_size,hp_dataset_name,weights_name,max_epochs,patience_epochs):
     clear_session()
     #CREATE MODEL
-    model=IRNet_model(n_layers,input_shape,activation_function,learning_rate) 
+    model=fcunet_model(n_layers,input_shape,activation_function,learning_rate) 
     
     start_time = timeit.default_timer()
     history = model.fit(xtrain,ytrain,
